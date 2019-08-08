@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-08-08T10:22:12Z",
+  "id": "fd-data-api4",
+  "duration": 0,
+  "title": "Data API Tutorial",
+  "authors": "Hemchander S",
+  "summary": "You can use these APIs to retrieve information about different objects on a page. Freshdesk sample app",
+  "source": "1b6eF-Vi4LBeFvqzubcKN4cs85fyT4XVPSQuEGhSGvcc",
+  "theme": "freshdesk",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Freshdesk"
+  ],
+  "tags": [
+    "freshdesk"
+  ],
+  "feedback": "https://github.com/freshdesk/marketplace-sample-apps/",
+  "ga": "UA-52746336-1",
+  "url": "fd-data-api4"
+}

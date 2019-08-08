@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-08-07T18:01:41+05:30",
+  "id": "fd-data-api",
+  "duration": 10,
+  "title": "Data API",
+  "summary": "Freshdesk Data API",
+  "source": "fd-data-api.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "freshchat"
+  ],
+  "tags": [
+    "freshchat",
+    "web"
+  ],
+  "feedback": "https://github.com/freshdesk/marketplace-sample-apps",
+  "ga": "0",
+  "url": "fd-data-api"
+}
