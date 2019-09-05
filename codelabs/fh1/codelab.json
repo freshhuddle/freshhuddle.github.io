@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-09-05T09:05:49Z",
+  "id": "fh1",
+  "duration": 0,
+  "title": "1.Create your first app for freshdesk",
+  "authors": "Hemchander S",
+  "summary": "Create your first app for freshdesk",
+  "source": "1rSJlTFkaT_rcSzyfhdzAI1_8ot6V7rKAp9Jj3VVwb6I",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "freshdesk"
+  ],
+  "feedback": "https://github.com/hemchander23/weatherbuddy",
+  "ga": "UA-52746336-1",
+  "url": "fh1"
+}
