@@ -1,26 +1,25 @@
 {
-  "environment": "web",
+  "environment": "Freshdesk",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2019-09-05T08:53:29Z",
+  "updated": "2019-09-16T01:40:23Z",
   "id": "fh3",
   "duration": 0,
-  "title": "2. Simple Github integration using OAuth, Data Storage, Notifications",
+  "title": "4. Introduction to Serverless Apps",
   "authors": "Hemchander S",
-  "summary": "In this tutorial, we will create a simple app that integrates with Github and lets us create issues for Freshdesk tickets. We will also learn some of the frequently used platform's features like Request API, Data Storage, Notifications, OAuth, Installation Parameters, UI Modals/Dialogs along the way!",
-  "source": "1zmeDhYAWRIjScyL792N_fU1x_Ar3vNrN275BEKzqYaA",
+  "summary": "The Freshworks app development platform includes a serverless environment to enable you to create apps that run in response to events that can originate from the Freshworks products, the app setup lifecycle, as well as events from any compatible service on the Internet.",
+  "source": "1t3Y6jB-HWCI-d_lJulkmktFoENfPCBoZ5_4C0igmu_o",
   "theme": "web",
   "status": [
     "published"
   ],
   "category": [
-    "Web",
     "Freshdesk"
   ],
   "tags": [
     "freshdesk"
   ],
-  "feedback": "https://github.com/hemchander23/fh3/",
+  "feedback": "https://github.com/hemchander23/weatherbuddy",
   "url": "fh3"
 }

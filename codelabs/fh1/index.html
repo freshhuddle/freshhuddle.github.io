@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>1.Create your first app for freshdesk</title>
+  <title>2. Create your first advanced app for Freshdesk</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -21,19 +21,23 @@
 </head>
 <body>
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
-  <google-codelab codelab-gaid="UA-52746336-1"
+  <google-codelab codelab-gaid=""
                   id="fh1"
-                  title="1.Create your first app for freshdesk"
+                  title="2. Create your first advanced app for Freshdesk"
                   environment="web"
-                  feedback-link="https://github.com/hemchander23/weatherbuddy">
+                  feedback-link="">
     
       <google-codelab-step label="Introduction" duration="0">
-        <p>Apps are crucial in achieving custom features on freshworks platform, this tutorial focuses on creating an app that helps developers in getting accustomed to advanced features in freshworks platform.</p>
-<p>In this section of the training, we&#39;ll develop an app that creates a ticket from the user input in freshdesk. </p>
+        <p>This tutorial focuses on creating an app that helps developers get accustomed to the advanced features of the Freshworks platform.</p>
+<p>In this segment, we will develop an app that creates a ticket in Freshdesk based on user input.  </p>
 <p><strong>Prerequisites:-</strong></p>
 <ol type="1" start="1">
-<li>Freshdesk account and API key</li>
-<li>Completion of ‘Introduction to Freshworks Developer platform&#39;</li>
+<li>You should have a trial <strong>Freshdesk account </strong></li>
+<li>You should have an <strong>API key</strong> for a Freshdesk user. Refer the image below to obtain the API key</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/66b224415b610a17.gif"></p>
+<ol type="1" start="3">
+<li>You have gone through the previous tutorial (‘Introduction to Freshworks Developer platform&#39;)</li>
 </ol>
 
 
@@ -41,29 +45,24 @@
     
       <google-codelab-step label="Get the sample code" duration="0">
         <ol type="1" start="1">
-<li>Clone the repository </li>
+<li>Clone the sample apps repository <a href="https://github.com/freshdesk/marketplace-sample-apps" target="_blank">https://github.com/freshdesk/marketplace-sample-apps</a></li>
+<li>Navigate to the directory - Training/fundamentals/level1</li>
 </ol>
-<p><a href="https://github.com/velmurugan-balasubramanian/v1-start" target="_blank">https://github.com/velmurugan-balasubramanian/v1-start</a></p>
-<ol type="1" start="2">
-<li>Change the directory to  training-v1/start</li>
-</ol>
-<p>cd v1/start</p>
-<ol type="1" start="3">
-<li>Open the folder in text editor and test the app by running the following command</li>
-</ol>
-<p>fdk run</p>
-<p>code under the start folder is a skeleton on top of which the whole app will be built in the subsequent steps</p>
+<pre><code>cd Training/fundamentals/level1</code></pre>
+<p>The app source code under the start folder is a skeleton on top of which the complete app will be built in the subsequent steps.</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Build the UI" duration="0">
+      <google-codelab-step label="Build the User Interface 🚩" duration="0">
         <ol type="1" start="1">
-<li>Copy the following code and paste into template.html file in the cloned code</li>
+<li>We are building a sidebar app that shows a simple form with fields required for ticket creation. These fields include <strong>title, description, </strong>and <strong>email. <br></strong></li>
+<li>Copy the following HTML snippet and paste it between the <em>body</em> tags in the <strong>template.html</strong> file. This snippet helps generate an HTML form to collect the user input for creating a ticket.</li>
 </ol>
-<pre><code>&lt;div class=&#34;fw-widget-wrapper&#34;&gt;
+<pre><code> &lt;!-- 1.1 Form HTML ! 🤘 --&gt;
+ &lt;div class=&#34;fw-widget-wrapper padding&#34;&gt;
 
-   &lt;form class=&#34;padding&#34; id=&#39;ticketForm&#39;&gt;
+   &lt;form role=&#34;form&#34; id=&#39;ticketForm&#39;&gt;
 
      &lt;div class=&#34;form-group&#34;&gt;
        &lt;label for=&#34;title&#34;&gt;Ticket Title&lt;/label&gt;
@@ -76,67 +75,72 @@
      &lt;/div&gt;
 
      &lt;div class=&#34;form-group&#34;&gt;
-       &lt;label for=&#34;email&#34;&gt;Email address:&lt;/label&gt;
+       &lt;label for=&#34;email&#34;&gt;Email address&lt;/label&gt;
        &lt;input type=&#34;email&#34; class=&#34;form-control&#34; required id=&#34;email&#34;&gt;
      &lt;/div&gt;
 
    &lt;/form&gt;
 
-   &lt;div class=&#34;padding&#34;&gt;
-     &lt;button id=&#34;createTicket&#34; class=&#34;btn btn-default&#34;&gt;Create Ticket&lt;/button&gt;
+   &lt;div class=&#34;col-md-4 text-center&#34;&gt;
+     &lt;button id=&#34;createTicket&#34; class=&#34;btn btn-primary&#34;&gt;Create Ticket&lt;/button&gt;
    &lt;/div&gt;
 
  &lt;/div&gt;</code></pre>
-<ol type="1" start="2">
-<li>The HTML form in the above code is used to collect user input of ticket data. </li>
-</ol>
+<aside class="special"><p><strong>Tips: <br><br></strong>1. The Freshdesk Mint UI is built on a modified version of the Bootstrap v3.3 framework. The user interface of apps that are to be published on Freshworks Marketplace needs to be consistent with the Freshdesk UI.</p>
+<p>2. Import the Freshdesk app stylesheet in all templates and ensure that the class names of UI elements used in the app match those used by Bootstrap.</p>
+</aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Create Ticket" duration="0">
+      <google-codelab-step label="Create Ticket 🚩" duration="0">
         <ol type="1" start="1">
-<li>As mentioned in the Introduction to the Freshworks developer platform section, not all APIs can be accessed directly from SDK, one of which is the ticket API through which a ticket can be created, viewed, updated or deleted. </li>
-<li>Copy the following function and paste it on the cloned app</li>
+<li>Now that we have the UI in place, we need to write the logic. The logic here is a simple API call with the form inputs.<br></li>
+<li>Copy the <code>createFreshdeskTicket()</code> function snippet and paste it in line 31 of the <strong>app.js</strong> file in the app </li>
 </ol>
 <pre><code>/**
-   *
-   * @param {String} title          Ticket title
-   * @param {String} description    Ticket description
-   * @param {String} email          email of the user that creates ticket
-   */
-  function CreateFreshdeskTicket(title, description, email) {
-
-    client.request.post(&#34;https://yoursubdomain.freshdesk.com/api/v2/tickets&#34;, {
-    
-     let  headers: {
-        Authorization: &#34;Basic &lt;%= encode(iparam.freshdesk_api_key)%&gt;&#34;,
-        &#34;Content-Type&#34;: &#34;application/json;charset=utf-8&#34;
-      },
-
-     let   body: JSON.stringify({
-        description: `${description}`,
-        email: `${email}`,
-        priority: 1,
-        status: 2,
-        subject: `${title}`
-      })
-    }).then(function () {
+* 1.2 Function to create a Freshdesk ticket ! 🤘
+* @param {String} title          Ticket title
+* @param {String} description    Ticket description
+* @param {String} email          email of the user that creates ticket
+*/
+function createFreshdeskTicket(title, description, email) {
+  client.request.post(&#34;https://&lt;%=iparam.freshdesk_subdomain%&gt;.freshdesk.com/api/v2/tickets&#34;, {
+    headers: {
+      Authorization: &#34;Basic &lt;%= encode(iparam.freshdesk_api_key)%&gt;&#34;,
+      &#34;Content-Type&#34;: &#34;application/json;charset=utf-8&#34;
+    },
+    body: JSON.stringify({
+      description: `${description}`,
+      email: `${email}`,
+      priority: 1,
+      status: 2,
+      subject: `${title}`
+    })
+  })
+    .then(function () {
       showNotification(&#39;success&#39;, &#39;Ticket is successfully created&#39;);
+      //Clears user input after posting data
       clearInputfields();
     })
-      .catch(function () {
-        showNotification(&#39;danger&#39;, &#39;Unable to create ticket&#39;);
-      });
-  }</code></pre>
+    .catch(function (error) {
+      console.error(error);
+      showNotification(&#39;danger&#39;, &#39;Unable to create ticket&#39;);
+    });
+}</code></pre>
+<ol type="1" start="3">
+<li>The function uses the<strong> Request API</strong> feature to create a ticket in Freshdesk. <br></li>
+</ol>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Secure sensitive data with iparams" duration="0">
+      <google-codelab-step label="Installation Parameters 🚩" duration="0">
         <ol type="1" start="1">
-<li>Iparams can be an effective tool to abstract sensitive data from the end-user. </li>
-<li>Copy the following code into Iparams.json file </li>
+<li>Installation parameters (also known as iparams) are values that users configure when installing apps. You can define these parameters in the iparams.json file available in the <strong>config</strong> directory </li>
+<li>The app expects two installation parameters - an <strong>API key</strong> and a <strong>subdomain</strong>.</li>
+<li>In this case, the API key is secured using the <em>secure</em> property when defined as an iparam.</li>
+<li>Copy the following JSON into the <strong>iparams.json </strong>file </li>
 </ol>
 <pre><code>{
  &#34;freshdesk_api_key&#34;: {
@@ -147,66 +151,55 @@
    &#34;secure&#34;: true
  },
  &#34;freshdesk_subdomain&#34;: {
-   &#34;display_name&#34;: &#34;Freshdesk sub-domain&#34;,
-   &#34;description&#34;: &#34;Please enter your Freshdesk sub-domain. It&#39;s in the URL, the name which appears before (.freshdesk.com) in the URL.&#34;,
+   &#34;display_name&#34;: &#34;Freshdesk Sub-domain&#34;,
+   &#34;description&#34;: &#34;Please enter your Freshdesk sub-domain. It&#39;s in the URL, the name which appears before (.freshdesk.com) in the URL. For ex: In `xyz.freshdesk.com`, `xyz` is the subdomain&#34;,
    &#34;type&#34;: &#34;text&#34;,
    &#34;required&#34;: true
  }
 }</code></pre>
-<p>Iparams.json defines the properties of the fields that will be used in the application</p>
-<ol type="1" start="3">
-<li>Copy the following code and paste it in iparams_test.json </li>
+<ol type="1" start="5">
+<li>Copy the following JSON and paste it in <strong>iparam_test_data.json </strong></li>
 </ol>
 <pre><code>{
- &#34;freshdesk_api_key&#34;: &#34;your_freshdesk_Api_key&#34;,
- &#34;freshdesk_subdomain&#34;: &#34;your_freshdesk_subdomain&#34;
+ &#34;freshdesk_api_key&#34;: &#34;&lt;YOUR_FRESHDESK_API_KEY&gt;&#34;,
+ &#34;freshdesk_subdomain&#34;: &#34;&lt;YOUR_FRESHDESK_SUBDOMAIN&gt;&#34;
 }</code></pre>
-<ol type="1" start="4">
-<li>Replace the hardcoded subdomain in CreateFreshdeskTicket() with Iparams function like shown below</li>
+<ol type="1" start="6">
+<li>Notice that we haven&#39;t hardcoded neither the subdomain nor the API key in <code>createFreshdeskTicket()</code>. They will be substituted by the iparam values.</li>
 </ol>
-<pre><code> /**
-   *
-   * @param {String} title          Ticket title
-   * @param {String} description    Ticket description
-   * @param {String} email          email of the user that creates ticket
-   */
-  function CreateFreshdeskTicket(title, description, email) {
-
-    client.request.post(&#34;https://&lt;%=iparam.freshdesk_subdomain%&gt;.freshdesk.com/api/v2/tickets&#34;, {
-      headers: {
-        Authorization: &#34;Basic &lt;%= encode(iparam.freshdesk_api_key)%&gt;&#34;,
-        &#34;Content-Type&#34;: &#34;application/json;charset=utf-8&#34;
-      },
-
-      body: JSON.stringify({
-        description: `${description}`,
-        email: `${email}`,
-        priority: 1,
-        status: 2,
-        subject: `${title}`
-      })
-    }).then(function () {
-      showNotification(&#39;success&#39;, &#39;Ticket is successfully created&#39;);
-      clearInputfields();
-    })
-      .catch(function () {
-        showNotification(&#39;danger&#39;, &#39;Unable to create ticket&#39;);
-      });
-  }</code></pre>
+<pre><code>client.request.post(&#34;https://&lt;%=iparam.freshdesk_subdomain%&gt;.freshdesk.com/api/v2/tickets&#34;, {
+    headers: {
+      Authorization: &#34;Basic &lt;%= encode(iparam.freshdesk_api_key)%&gt;&#34;,</code></pre>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Run and test the app" duration="0">
+      <google-codelab-step label="Let&#39;s run and test the app" duration="0">
         <ol type="1" start="1">
-<li>Start the app by firing </li>
+<li>Start the app by running the following command </li>
 </ol>
-<p>fdk run</p>
+<pre><code>fdk run</code></pre>
 <ol type="1" start="2">
-<li>Open a freshdesk ticket and append ‘?dev=true&#39; to the ticket URL</li>
-<li>Allow the browser to load unsafe scripts on the top right corner of the address bar </li>
-<li>Open the app and enter ticket details and create a new ticket </li>
+<li>Open a freshdesk ticket details page and append ‘?dev=true&#39; to the ticket URL (<a href="https://subdomain.freshdesk.com/helpdesk/tickets/1?dev=true" target="_blank">https://subdomain.freshdesk.com/helpdesk/tickets/1?dev=true</a>.</li>
+<li>Allow the browser to<strong> load unsafe scripts</strong> on the top right corner of the address bar </li>
 </ol>
+<p class="image-container"><img style="width: 624.00px" src="img/e7103731415a5458.png"></p>
+<ol type="1" start="4">
+<li>The app loads on right side of the ticket details page as per the specifications in the manifest.json file</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/c8528fc9952f98e7.png"></p>
+<ol type="1" start="5">
+<li>Open the app and enter the requested ticket details to create a new ticket </li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/3cc63fc82a8c5eb6.gif"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Kudos&#43;&#43;" duration="0">
+        <p>        Congratulations! You&#39;ve just completed your first advanced freshdesk app and learned about Request API, Interface API, and Installation Parameters</p>
+<h3 is-upgraded><strong>What&#39;s Next</strong></h3>
+<p>Now that we have seen the essential features, let&#39;s understand other interesting features such as OAuth, Data storage and Instance API (Notifications, Modals, Dialogs)</p>
 
 
       </google-codelab-step>

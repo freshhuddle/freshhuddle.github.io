@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>0.Introduction to Freshworks Developer Platform</title>
+  <title>1. Introduction to Freshworks Developer Platform</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -21,113 +21,115 @@
 </head>
 <body>
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
-  <google-codelab codelab-gaid="UA-52746336-1"
+  <google-codelab codelab-gaid=""
                   id="fh0"
-                  title="0.Introduction to Freshworks Developer Platform"
+                  title="1. Introduction to Freshworks Developer Platform"
                   environment="web"
-                  feedback-link="https://github.com/hemchander23/weatherbuddy">
+                  feedback-link="">
     
       <google-codelab-step label="Developer Platform" duration="0">
         <h3 is-upgraded>What is a Developer Platform?</h3>
-<p>When a product exposes some or all of it&#39;s feature to an external developer or company in the form of APIs or SDK to create an app, a developer platform enables the app to run inside the product.  </p>
-<p>Like most of the companies, freshworks offers a platform for the developers to develop apps for the platform. </p>
-<p>Developers can build apps for the following freshworks products</p>
+<p>As a multi-product SaaS company, Freshworks offers a platform to enable developers to customize their Freshworks products and integrate these products into their workflows. The platform provides gateways into the product through APIs, SDKs, webhooks, placeholders. Without this platform, customers would be unable to customize the experience of any Freshworks product to their tastes.</p>
+<p>The Freshworks Developer Platform primarily enables developers to build apps that can run within the context of a Freshworks product, and thus tailor the product experience for users from both the front-end and the back-end.</p>
+<p>Developers can build apps for the following Freshworks products</p>
 <ol type="1" start="1">
-<li>Freshdesk</li>
-<li>Freshservice</li>
-<li>Freshsales</li>
-<li>Freshchat</li>
-<li>Freshconnect</li>
-<li>Freshcaller</li>
+<li><img style="width: 27.50px" src="img/13ceb8beacc3da7b.png">Freshdesk</li>
+<li><img style="width: 24.50px" src="img/da66b220c74a234b.png"> Freshservice</li>
+<li> <img style="width: 24.50px" src="img/d554bb420ed48563.png"> Freshchat</li>
+<li> <img style="width: 23.50px" src="img/6caeadbe7fdd82fe.png"> Freshcaller</li>
+<li> <img style="width: 23.50px" src="img/5612abe026b6245e.png"> Freshsales</li>
 </ol>
-<p>This course covers Freshworks app sdk, and basics of app development, </p>
+<p>This course covers the Freshworks Developer Kit (FDK), and the basics of app development on the Freshworks platform. </p>
 <p>The content is intended for developers with working knowledge of HTML, CSS, and JavaScript.</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Apps" duration="0">
-        <h3 is-upgraded>Why Apps?</h3>
-<p>The Freshworks suite of products are as feature rich but apps are a necessity to bridge the gap between the niche requirements of customers and the built-in features of a product.</p>
+      <google-codelab-step label="Why Apps?" duration="0">
+        <p>The Freshworks suite of products is feature-rich but apps are a necessity to <strong>bridge the gap between the niche requirements of customers and the built-in features of a product</strong>.</p>
+<p>The platform supports both frontend apps and backend serverless apps.</p>
 <h3 is-upgraded>What do I need to create an app? </h3>
-<p>To get started with the freshworks app, the developer is expected to have working knowledge of the following,</p>
+<p>To get started with a Freshworks app, the developer is expected to have working knowledge of the following,</p>
 <ol type="1" start="1">
-<li>Freshworks app SDK</li>
+<li>Freshworks app SDK (FDK)</li>
 <li>HTML</li>
 <li>CSS</li>
 <li>JavaScript</li>
-<li>Basic shell/unix commands</li>
-<li>Account for the product, to which the app is intended for </li>
+<li>Basic shell/UNIX commands</li>
+<li>An active account for the Freshworks product which the app is intended for </li>
 </ol>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="FDK" duration="0">
-        <p>Freshworks Developer Kit (FDK), is a command line interface that helps a developer to create apps for the platform. The developer can perform the following actions with the FDK</p>
+      <google-codelab-step label="Freshworks Developer Kit" duration="0">
+        <p>The Freshworks Developer Kit (FDK) is a command-line interface that helps developers build apps for the platform. The developer can perform the following actions with the FDK</p>
 <ul>
 <li>Create a Freshworks app  </li>
-<li>Run  an app</li>
+<li>Run an app in a simulated platform environment</li>
 <li>Validate the app using ESlint</li>
-<li>Pack or /bundle</li>
+<li>Pack or bundle the app</li>
+<li>Generate configuration files</li>
 </ul>
 <p>Install FDK</p>
-<p>FDK installation is supported on supports Mac, Linux, and Windows., currently FDK requires Node. js version v8. Verify if the requisite version of node.js is installed. if not follow the steps to i<a href="https://developers.freshdesk.com/v2/docs/quick-start/#install_nvm" target="_blank">nstall node.js 8 using the Node version manager (NVM)</a></p>
-<p>Navigate to the terminal and To install FDK, run the following command tocommand, to install the FDK: in your terminal </p>
-<p><code>npm install https://dl.freshdev.io/cli/fdk-5.0.9.tgz -g</code></p>
-<p>To verify the  installation, run the command <code>fdk version</code>. </p>
+<p>FDK installation is supported on Mac, Linux, and Windows. Currently FDK requires NodeJS version 8. Verify if the requisite version of Nodejs is installed. If not, follow the steps from the developer documentation to i<a href="https://developers.freshdesk.com/v2/docs/quick-start/#install_nvm" target="_blank">nstall Node.js 8 using the Node version manager (NVM)</a></p>
+<aside class="special"><p><strong>Tip: </strong>It is recommended to use <a href="https://developers.freshdesk.com/v2/docs/quick-start/#install_nvm" target="_blank">Node Version Manager (NVM)</a> to install Node.js as it enables you to install and work with multiple versions of Node easily. If you face any issues while installing FDK, kindly <a href="https://app.slack.com/client/TND70AV7H/CNC85BRM3" target="_blank">reach out to us</a>.</p>
+</aside>
+<p>Navigate to the terminal on your laptop and run the following command to install the FDK:</p>
+<p><code>npm install https://dl.freshdev.io/cli/fdk-5.2.1.tgz -g</code></p>
+<p>To verify the installation, run the command <code>fdk version</code>. </p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="CREATE YOUR FIRST APP" duration="0">
-        <p>Though app development is more or less similar for all Freshworks suite of products, this tutorial will take freshdesk as an example</p>
-<p>        Before starting the tutorial a freshdesk account is mandatory, which can be created <a href="https://freshdesk.com/signup" target="_blank">here</a></p>
+      <google-codelab-step label="Create your first app" duration="0">
+        <p>App development for most products in the Freshworks suite is similar. This tutorial will showcase how to build an app for Freshdesk.</p>
+<p>Before you get started with this tutorial, you will need an active Freshdesk account. If you don&#39;t have one, you can get one <a href="https://freshdesk.com/signup" target="_blank">here</a></p>
 <ol type="1" start="1">
-<li>Create a new folder, open the folder in terminal, run the following command to create an app </li>
+<li>Create a new directory to hold your new app, navigate to the directory in the terminal, and run the following command to create an app.</li>
 </ol>
-<p>FWS-CHE-LT-2637:training velmuruganbala$ fdk create</p>
+<pre><code>mkdir project &amp;&amp; cd project </code></pre>
 <ol type="1" start="2">
-<li>Fill out the necessary details when prompted</li>
+<li>Run the following command to create an app </li>
 </ol>
-<p>Choose the product as Freshdesk</p>
-<p>? <strong>Choose a product:</strong> (Use arrow keys)</p>
-<p>❯ freshdesk </p>
-<p>  freshservice </p>
-<p>  freshsales </p>
-<p>  freshchat </p>
-<p>  freshconnect </p>
-<p>  freshcaller </p>
+<pre><code>fdk create</code></pre>
 <ol type="1" start="3">
-<li>Choose a template as <strong>your_first_app </strong>to create a frontend app. </li>
+<li>The FDK displays prompts asking you to select a <strong>product</strong> and then a <strong>template</strong>.</li>
+<li>Select <code>freshdesk</code> as the product and <code>your_first_app</code> as the template (to create a front-end app).</li>
 </ol>
-<p>                ? <strong>Choose a template:</strong> (Use arrow keys)</p>
-<p>❯ your_first_app </p>
-<p>  your_first_serverless_app </p>
-<p>          sample_crm_app </p>
-<ol type="1" start="4">
-<li>Once the app is created successfully the folder will contain following files,</li>
+<pre><code>  ? Choose a product: (Use arrow keys)
+❯ freshdesk 
+  freshservice 
+  freshsales 
+  freshchat 
+  freshconnect 
+  freshcaller </code></pre>
+<ol type="1" start="5">
+<li>Choose <strong>your_first_app </strong>template to create a frontend app. </li>
 </ol>
-<p>                ├── README.md</p>
-<p>├── app</p>
-<p>│   ├── app.js</p>
-<p>│   ├── freshdesk_logo.png</p>
-<p>│   ├── icon.svg</p>
-<p>│   ├── style.css</p>
-<p>│   └── template.html</p>
-<p>├── config</p>
-<p>│   ├── iparam_test_data.json</p>
-<p>│   └── iparams.json</p>
-<p>└── manifest.json</p>
+<pre><code>  ? Choose a template: (Use arrow keys)
+  ❯ your_first_app 
+    your_first_serverless_app 
+      sample_crm_app </code></pre>
+<p>Alternatively, <br> </p>
+<ol type="1" start="6">
+<li>You can use <code>fdk create --products freshdesk --template your_first_app</code> to create the app directly</li>
+</ol>
+<ol type="1" start="7">
+<li>The app is created and the directory contains the following files:</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/e8354536a72949c9.png"></p>
+<aside class="warning"><p><strong>Tip: </strong>You can use the following command to create a boilerplate app directly for a particular Freshworks product <strong>fdk create [--app-dir DIR] [--products PRODUCT] [--template TEMPLATE] <br><br></strong>For example: <code>fdk create --products freshdesk --template your_first_app</code></p>
+</aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="APP STRUCTURE" duration="0">
+      <google-codelab-step label="Understanding the app structure" duration="0">
         <p>Files Explained</p>
 <table>
 <tr><td colspan="1" rowspan="1"><p>app.js</p>
-</td><td colspan="1" rowspan="1"><p>app.js is where the business logic of the app resides in</p>
+</td><td colspan="1" rowspan="1"><p>app.js is where the business logic of the app resides</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>template.html</p>
 </td><td colspan="1" rowspan="1"><p>This file contains the HTML required for the app&#39;s UI which is rendered in an IFrame.</p>
@@ -142,13 +144,16 @@
 </td><td colspan="1" rowspan="1"><p>This file contains details about your app and its characteristics.</p>
 </td></tr>
 </table>
-<p><strong>Manifest.json</strong></p>
-<p>        manifest.json file is one of the important files, the file contains the data that defines the app, i.e </p>
-<p>product for which the app is developed</p>
-<p>The location where the app has to be loaded, </p>
-<p>Which HTML file has to be loaded inside the iframe</p>
-<p>Sample manifest file of a freshdesk app</p>
-<pre><code> &#34;platform-version&#34;: &#34;2.0&#34;,
+<p><strong>manifest.json</strong></p>
+<p>manifest.json file is one of the important files in your app. It contains configuration data that defines the app. This includes,</p>
+<ul>
+<li>The Freshworks product for which the app is developed</li>
+<li>The <code>placeholder</code> location where the app must load, </li>
+<li>The HTML file that must be loaded inside the iframe</li>
+</ul>
+<p>Sample manifest file of a Freshdesk app</p>
+<pre><code>{
+ &#34;platform-version&#34;: &#34;2.0&#34;,
  &#34;product&#34;: {
    &#34;freshdesk&#34;: {
      &#34;location&#34;: {
@@ -164,50 +169,56 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Testing your first APP" duration="0">
-        <p>        The app that is created from<strong> ‘your_first_app&#39;</strong> template in the previous has a basic functionality</p>
-<p>                As shown in the above manifest file, the app created is a freshdesk app which  loads on ticket sidebar and can be run by following steps</p>
-<p>                Run fdk run  in the project folder </p>
-<p>                Once the app starts on port 10001 login to your freshdesk portal in the browser and open a ticket</p>
-<p>                In the address bar append the URL with ?dev=true. For example, the URL should look like this:   <a href="https://subdomain.freshdesk.com/helpdesk/tickets/1?dev=true" target="_blank">https://subdomain.freshdesk.com/helpdesk/tickets/1?dev=true</a>.</p>
-<p>                Once the ticket is loaded make sure the load unsafe scripts is enabled by clicking the shield icon on the top right corner of the address bar </p>
-<p>        Once unsafe scripts are loaded, the page reloads and the app can be seen in the bottom right corner of the page </p>
+      <google-codelab-step label="Test your app" duration="0">
+        <p>The app created from the<strong> ‘your_first_app&#39;</strong> template in the previous section is very basic. As shown in the manifest file above, the app is setup to load in the ticket sidebar. The app can be run with the following steps,</p>
+<ol type="1" start="1">
+<li>From your terminal, from within the app directory, Run <strong>fdk run  </strong></li>
+<li>Once the FDK starts serving the app, it will display a message noting that the app is being served on port 10001 on localhost. </li>
+<li>Login to your Freshdesk account in Chrome and navigate to a ticket</li>
+<li>In the address bar append &#34;?dev=true&#34; to the URL. For example, the modified URL should look like this:  <a href="https://subdomain.freshdesk.com/helpdesk/tickets/1?dev=true" target="_blank">https://subdomain.freshdesk.com/helpdesk/tickets/1?dev=true</a>.</li>
+<li>Once the ticket page loads, make sure &#34;load unsafe scripts&#34; is enabled for this page by clicking the shield icon on the top right corner of the address bar </li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/e7103731415a5458.png"></p>
+<p>Once the &#34;Load unsafe scripts&#34; button is selected, the page reloads and the app can be seen in the bottom right corner of the page </p>
+<p class="image-container"><img style="width: 624.00px" src="img/a886820d51053a30.png"></p>
+<aside class="warning"><p><strong>Tip: </strong>Make sure <strong>&#34;Load unsafe scripts&#34;</strong> is enabled for this page by clicking the shield icon on the top right corner of the address bar. If not, the app won&#39;t appear in the respective placeholder.</p>
+</aside>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Freshworks SDK features" duration="0">
-        <p><strong>Introduction to Freshworks App SDK features</strong></p>
-<p>        Freshworks App SDK is equipped with features and API&#39;s that helps the developer in building apps in an efficient and less time consuming way</p>
-<p>FDK features are classified into basic and advanced features, </p>
+        <p><strong>A Quick Introduction</strong></p>
+<p>The Freshworks App SDK is equipped with features that help the developer build powerful apps faster.</p>
+<p>These features can be classified into basic and advanced features, </p>
 <p><strong>Basic features</strong></p>
 <table>
-<tr><td colspan="1" rowspan="1"><p>Data APIs</p>
-</td><td colspan="1" rowspan="1"><p>Used to  fetch data from the product(Freshdesk, Freshservice)</p>
+<tr><td colspan="1" rowspan="1"><p>Data API</p>
+</td><td colspan="1" rowspan="1"><p>Enable the app to fetch contextual data from the Freshworks product where it loads</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>Events API</p>
-</td><td colspan="1" rowspan="1"><p>Enable developers to react to events that occur in the user interface of a          page. This includes button clicks, changes, and updates to field values</p>
+</td><td colspan="1" rowspan="1"><p>Enable the app to react to events that occur in the page where it loads. This includes button clicks, state changes, and updates to field values</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>Interface API</p>
-</td><td colspan="1" rowspan="1"><p>Used to trigger user interface actions on a page. With these APIs, an app can control the visibility of ticket properties, hide or disable buttons, and show dialog boxes and notifications.</p>
+</td><td colspan="1" rowspan="1"><p>Used to trigger user interface actions on the page. Using these APIs, an app can control the visibility of properties, hide or disable buttons, and show dialog boxes and notifications.</p>
 </td></tr>
 </table>
 <p>Advanced Features</p>
 <table>
 <tr><td colspan="1" rowspan="1"><p>Data Storage</p>
-</td><td colspan="1" rowspan="1"><p>Data storage feature helps the developer to store data in the platform in JSON format upto 8kb on per account AND per app basis</p>
+</td><td colspan="1" rowspan="1"><p>Enables the app to store data in the platform in JSON format, upto 8KB</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>Request API</p>
-</td><td colspan="1" rowspan="1"><p>Request API is used to make https calls </p>
+</td><td colspan="1" rowspan="1"><p>Enables CORS-compliant HTTPS requests</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>Instance API</p>
-</td><td colspan="1" rowspan="1"><p>Instance API is used to manipulate an instance of the app if multiple instances of the app are available</p>
+</td><td colspan="1" rowspan="1"><p>Enables the app to control its experience and communicate across multiple instances of the app loading in the same page</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>OAuth</p>
-</td><td colspan="1" rowspan="1"><p>In addition to basic security, through Iparams, Freshworks platform also supports OAuth for authorization</p>
+</td><td colspan="1" rowspan="1"><p>Enables integration with a service that supports OAuth for authorization</p>
 </td></tr>
 </table>
-<p>        Though an app can use any of the above mentioned APIs or in combination, sdk APIs are not as same the product core APIs, To access product APIs like ticket API, contact API or agent API from the app, the app needs to make use of API key like an external app</p>
+<p>We will learn about these features in the coming sessions! Kudos for creating your first app 🎈</p>
 
 
       </google-codelab-step>

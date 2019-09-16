@@ -1,26 +1,24 @@
 {
-  "environment": "web",
+  "environment": "Freshdesk",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2019-09-05T09:05:49Z",
+  "updated": "2019-09-16T01:40:15Z",
   "id": "fh1",
   "duration": 0,
-  "title": "1.Create your first app for freshdesk",
-  "authors": "Hemchander S",
-  "summary": "Create your first app for freshdesk",
-  "source": "1rSJlTFkaT_rcSzyfhdzAI1_8ot6V7rKAp9Jj3VVwb6I",
+  "title": "2. Create your first advanced app for Freshdesk",
+  "authors": "Velmurugan B",
+  "summary": "This tutorial focuses on creating an app that helps developers get accustomed to the advanced features of the Freshworks platform. In this segment, we will develop an app that creates a ticket in Freshdesk based on user input.",
+  "source": "1OikaA8dCJCzKSWWssl6RCaMZEngKU3vIX3eYuKalN0M",
   "theme": "web",
   "status": [
     "published"
   ],
   "category": [
-    "Web"
+    "Freshdesk"
   ],
   "tags": [
     "freshdesk"
   ],
-  "feedback": "https://github.com/hemchander23/weatherbuddy",
-  "ga": "UA-52746336-1",
   "url": "fh1"
 }

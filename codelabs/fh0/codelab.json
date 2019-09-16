@@ -1,27 +1,24 @@
 {
-  "environment": "web",
+  "environment": "Freshdesk",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2019-09-05T09:04:11Z",
+  "updated": "2019-09-16T01:40:05Z",
   "id": "fh0",
   "duration": 0,
-  "title": "0.Introduction to Freshworks Developer Platform",
+  "title": "1. Introduction to Freshworks Developer Platform",
   "authors": "Hemchander S",
-  "summary": "Introduction to Freshworks Developer Platform",
-  "source": "1cgOqCw13vT_JXdZpccVhTMJTKoLORd7ZTmNSjbX0fMA",
+  "summary": "The Freshworks Developer Platform primarily enables developers to build apps that can run within the context of a Freshworks product, and thus tailor the product experience for users from both the front-end and the back-end.",
+  "source": "1kVNbCYhMC4OU2L0MoW_tM-S9ddrOv9gqJmcjCWnj6VY",
   "theme": "web",
   "status": [
     "published"
   ],
   "category": [
-    "Web",
-    "Freshdesks"
+    "Freshdesk"
   ],
   "tags": [
     "freshdesk"
   ],
-  "feedback": "https://github.com/hemchander23/weatherbuddy",
-  "ga": "UA-52746336-1",
   "url": "fh0"
 }
