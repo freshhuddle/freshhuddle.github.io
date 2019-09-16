@@ -30,6 +30,7 @@
       <google-codelab-step label="Developer Platform" duration="0">
         <h3 is-upgraded>What is a Developer Platform?</h3>
 <p>As a multi-product SaaS company, Freshworks offers a platform to enable developers to customize their Freshworks products and integrate these products into their workflows. The platform provides gateways into the product through APIs, SDKs, webhooks, placeholders. Without this platform, customers would be unable to customize the experience of any Freshworks product to their tastes.</p>
+<p class="image-container"><img style="width: 624.00px" src="img/a5685db84f2ee7d1.png"></p>
 <p>The Freshworks Developer Platform primarily enables developers to build apps that can run within the context of a Freshworks product, and thus tailor the product experience for users from both the front-end and the back-end.</p>
 <p>Developers can build apps for the following Freshworks products</p>
 <ol type="1" start="1">
@@ -62,7 +63,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Freshworks Developer Kit" duration="0">
+      <google-codelab-step label="Freshworks Developer Kit 🚩" duration="0">
         <p>The Freshworks Developer Kit (FDK) is a command-line interface that helps developers build apps for the platform. The developer can perform the following actions with the FDK</p>
 <ul>
 <li>Create a Freshworks app  </li>
@@ -173,12 +174,11 @@
         <p>The app created from the<strong> ‘your_first_app&#39;</strong> template in the previous section is very basic. As shown in the manifest file above, the app is setup to load in the ticket sidebar. The app can be run with the following steps,</p>
 <ol type="1" start="1">
 <li>From your terminal, from within the app directory, Run <strong>fdk run  </strong></li>
-<li>Once the FDK starts serving the app, it will display a message noting that the app is being served on port 10001 on localhost. </li>
+<li>Once the FDK starts serving the app, it will display a message noting that the app is being served on port 10001 on localhost. <br><br><img style="width: 624.00px" src="img/d01565997ef97660.gif"><br></li>
 <li>Login to your Freshdesk account in Chrome and navigate to a ticket</li>
 <li>In the address bar append &#34;?dev=true&#34; to the URL. For example, the modified URL should look like this:  <a href="https://subdomain.freshdesk.com/helpdesk/tickets/1?dev=true" target="_blank">https://subdomain.freshdesk.com/helpdesk/tickets/1?dev=true</a>.</li>
-<li>Once the ticket page loads, make sure &#34;load unsafe scripts&#34; is enabled for this page by clicking the shield icon on the top right corner of the address bar </li>
+<li>Once the ticket page loads, make sure &#34;load unsafe scripts&#34; is enabled for this page by clicking the shield icon on the top right corner of the address bar <br><br><img style="width: 624.00px" src="img/d22c01ac15c9ee0a.gif"></li>
 </ol>
-<p class="image-container"><img style="width: 624.00px" src="img/e7103731415a5458.png"></p>
 <p>Once the &#34;Load unsafe scripts&#34; button is selected, the page reloads and the app can be seen in the bottom right corner of the page </p>
 <p class="image-container"><img style="width: 624.00px" src="img/a886820d51053a30.png"></p>
 <aside class="warning"><p><strong>Tip: </strong>Make sure <strong>&#34;Load unsafe scripts&#34;</strong> is enabled for this page by clicking the shield icon on the top right corner of the address bar. If not, the app won&#39;t appear in the respective placeholder.</p>
@@ -193,32 +193,34 @@
 <p>These features can be classified into basic and advanced features, </p>
 <p><strong>Basic features</strong></p>
 <table>
-<tr><td colspan="1" rowspan="1"><p>Data API</p>
+<tr><td colspan="1" rowspan="1"><p><em>Data API</em></p>
 </td><td colspan="1" rowspan="1"><p>Enable the app to fetch contextual data from the Freshworks product where it loads</p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>Events API</p>
+<tr><td colspan="1" rowspan="1"><p><em>Events API</em></p>
 </td><td colspan="1" rowspan="1"><p>Enable the app to react to events that occur in the page where it loads. This includes button clicks, state changes, and updates to field values</p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>Interface API</p>
-</td><td colspan="1" rowspan="1"><p>Used to trigger user interface actions on the page. Using these APIs, an app can control the visibility of properties, hide or disable buttons, and show dialog boxes and notifications.</p>
+<tr><td colspan="1" rowspan="1"><p><em>Interface API</em></p>
+</td><td colspan="1" rowspan="1"><p>Used to trigger user interface actions on the page. Using these APIs, an app can control the visibility of properties, hide or disable buttons, and show dialog boxes and notifications</p>
 </td></tr>
 </table>
-<p>Advanced Features</p>
+<p><strong>Advanced Features</strong></p>
 <table>
-<tr><td colspan="1" rowspan="1"><p>Data Storage</p>
-</td><td colspan="1" rowspan="1"><p>Enables the app to store data in the platform in JSON format, upto 8KB</p>
+<tr><td colspan="1" rowspan="1"><p><em>Data Storage</em></p>
+</td><td colspan="1" rowspan="1"><p>Enables the app to store data in the platform in JSON format</p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>Request API</p>
-</td><td colspan="1" rowspan="1"><p>Enables CORS-compliant HTTPS requests</p>
+<tr><td colspan="1" rowspan="1"><p><em>Request API</em></p>
+</td><td colspan="1" rowspan="1"><p>Enables secure, Cross-Origin Resource Sharing (CORS) supported HTTP requests</p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>Instance API</p>
+<tr><td colspan="1" rowspan="1"><p><em>Instance API</em></p>
 </td><td colspan="1" rowspan="1"><p>Enables the app to control its experience and communicate across multiple instances of the app loading in the same page</p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>OAuth</p>
+<tr><td colspan="1" rowspan="1"><p><em>OAuth</em></p>
 </td><td colspan="1" rowspan="1"><p>Enables integration with a service that supports OAuth for authorization</p>
 </td></tr>
 </table>
 <p>We will learn about these features in the coming sessions! Kudos for creating your first app 🎈</p>
+<p class="image-container"><img style="width: 498.00px" src="img/bc9b5d9ff763f367.gif"></p>
+<p><em>&#34;The platform(wand) chooses the developer(wizard) Mr. Potter&#34; - Ollivander</em></p>
 
 
       </google-codelab-step>

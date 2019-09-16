@@ -53,7 +53,7 @@
       </google-codelab-step>
     
       <google-codelab-step label="App UI" duration="0">
-        <p>If you navigate to <a href="https://github.com/hemchander23/fh3/blob/master/app/template.html" target="_blank">template.html</a>, you&#39;ll notice that we have a simple UI built using Bootstrap v3.3 and containing the product (Freshdesk) stylesheet. The UI looks as follows:</p>
+        <p>If you navigate to <strong>app/template.html</strong>, you&#39;ll notice that we have a simple UI built using Bootstrap v3.3 and containing the product (Freshdesk) stylesheet. The UI looks as follows:</p>
 <p class="image-container"><img style="width: 303.22px" src="img/cb473b0d7cc622fe.png"><br></p>
 <p>The <strong>Create Issue</strong> button enables us to create an issue and the <strong>View issue details</strong> button helps us to view the created issue. This is a simple sidebar app (there are other <a href="https://developers.freshdesk.com/v2/docs/app-locations/" target="_blank">placeholders</a> (Full page, background, CTI) in Freshdesk .</p>
 <h3 is-upgraded><br><a href="https://github.com/hemchander23/fh3/blob/master/app/template.html" target="_blank"><strong>app/template.html</strong></a></h3>
@@ -154,14 +154,14 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="How to secure API calls by using OAuth" duration="0">
+      <google-codelab-step label="How to secure API calls by using OAuth 🚩" duration="0">
         <p>Open Authorization (OAuth) is an open standard for delegated authorization . OAuth is commonly used as a way for users to grant websites or applications access to  information on other websites, without giving away the passwords. </p>
 <p class="image-container"><img style="width: 624.00px" src="img/53eb3326985cc5b2.png"></p>
 <p>For more information on OAuth, refer our <a href="https://developers.freshdesk.com/v2/docs/oauth/#configure" target="_blank">documentation</a>.. </p>
 <p>Let&#39;s proceed to create a GitHub app that would provide us the <code>client_id</code> and <code>client_secret</code> to enable OAuth in our app. When creating the app, ensure to provide the redirect URL for your app in the third-party developer portal (GitHub) with the following values:<br></p>
 <ul>
 <li><strong>Local Testing</strong>: <code>http://localhost:10001/auth/callback</code></li>
-<li><strong>Production</strong>: <a href="https://oauth.freshdev.io/auth/callback" target="_blank"><code>https://oauth.freshdev.io/auth/callback</code></a></li>
+<li><strong>Production</strong>: <code>https://oauth.freshdev.io/auth/callback</code></li>
 </ul>
 <p class="image-container"><img style="width: 624.00px" src="img/fe9306e87ff36d98.gif"></p>
 <p>After the app is created, obtain the <code>client_id</code> and <code>client_secret</code> values (Refer image below) and add them to the <strong>oauth_config.json </strong>file along with the authorization and token URLs. For more information, refer the GitHub developer docs.<img style="width: 624.00px" src="img/69708a6f57f10541.png"></p>
@@ -264,7 +264,7 @@ function createIssue() {
 * @param {array} data Issue array to be set in data storage
 */
 function setData(data) {
-  vvar dbKey = String(`fdTicket:${data.ticketID}`).substr(0, 30);
+  var dbKey = String(`fdTicket:${data.ticketID}`).substr(0, 30);
   var dbKey2 = String(`gitIssue:${data.issueNumber}`).substr(0, 30);
   Promise.all([client.db.set(dbKey, { issue_data: data }), client.db.set(dbKey2, { issue_data: data })]).then(function () {
     showNotification(&#39;success&#39;, &#39;Yay 🎉&#39;, &#39;A Github issue is successfully created for this ticket&#39;)
@@ -369,6 +369,9 @@ function getIssue(ticketID,callback) {
 <li>Learned to display notification from the app and </li>
 <li>Handed off control from the main instance of an app to a modal launched by the app.</li>
 </ul>
+<p><strong>What&#39;s next ?</strong></p>
+<p class="image-container"><img style="width: 559.50px" src="img/3b93dac7d2b92d07.gif"></p>
+<p><em>(Serverless technique,before it got mainstream) - Wimpy, Popeye </em></p>
 
 
       </google-codelab-step>

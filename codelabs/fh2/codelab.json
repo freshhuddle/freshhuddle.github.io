@@ -1,9 +1,9 @@
 {
-  "environment": "Freshdesk",
+  "environment": "web",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2019-09-16T01:49:11Z",
+  "updated": "2019-09-16T03:42:55Z",
   "id": "fh2",
   "duration": 0,
   "title": "3. Simple GitHub integration using OAuth, Data Storage, Notifications",

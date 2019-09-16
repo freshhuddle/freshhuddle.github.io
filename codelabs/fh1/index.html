@@ -30,7 +30,7 @@
       <google-codelab-step label="Introduction" duration="0">
         <p>This tutorial focuses on creating an app that helps developers get accustomed to the advanced features of the Freshworks platform.</p>
 <p>In this segment, we will develop an app that creates a ticket in Freshdesk based on user input.  </p>
-<p><strong>Prerequisites:-</strong></p>
+<p><strong>Prerequisites:-<br></strong></p>
 <ol type="1" start="1">
 <li>You should have a trial <strong>Freshdesk account </strong></li>
 <li>You should have an <strong>API key</strong> for a Freshdesk user. Refer the image below to obtain the API key</li>
@@ -43,13 +43,13 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Get the sample code" duration="0">
+      <google-codelab-step label="Get the sample code 🚩" duration="0">
         <ol type="1" start="1">
 <li>Clone the sample apps repository <a href="https://github.com/freshdesk/marketplace-sample-apps" target="_blank">https://github.com/freshdesk/marketplace-sample-apps</a></li>
 <li>Navigate to the directory - Training/fundamentals/level1</li>
 </ol>
 <pre><code>cd Training/fundamentals/level1</code></pre>
-<p>The app source code under the start folder is a skeleton on top of which the complete app will be built in the subsequent steps.</p>
+<p>The app source code in the directory is a skeleton on top of which the complete app will be built in the subsequent steps. Files referred to in this tutorial are relative to the <code>Training/fundamentals/level1</code> directory.</p>
 
 
       </google-codelab-step>
@@ -57,7 +57,7 @@
       <google-codelab-step label="Build the User Interface 🚩" duration="0">
         <ol type="1" start="1">
 <li>We are building a sidebar app that shows a simple form with fields required for ticket creation. These fields include <strong>title, description, </strong>and <strong>email. <br></strong></li>
-<li>Copy the following HTML snippet and paste it between the <em>body</em> tags in the <strong>template.html</strong> file. This snippet helps generate an HTML form to collect the user input for creating a ticket.</li>
+<li>Copy the following HTML snippet and paste it between the <em>body</em> tags in the <strong>app/template.html</strong> file. This snippet helps generate an HTML form to collect the user input for creating a ticket.</li>
 </ol>
 <pre><code> &lt;!-- 1.1 Form HTML ! 🤘 --&gt;
  &lt;div class=&#34;fw-widget-wrapper padding&#34;&gt;
@@ -96,7 +96,7 @@
       <google-codelab-step label="Create Ticket 🚩" duration="0">
         <ol type="1" start="1">
 <li>Now that we have the UI in place, we need to write the logic. The logic here is a simple API call with the form inputs.<br></li>
-<li>Copy the <code>createFreshdeskTicket()</code> function snippet and paste it in line 31 of the <strong>app.js</strong> file in the app </li>
+<li>Copy the <code>createFreshdeskTicket()</code> function snippet and paste it in line 31 of the <strong>app/app.js</strong> file in the app </li>
 </ol>
 <pre><code>/**
 * 1.2 Function to create a Freshdesk ticket ! 🤘
@@ -140,7 +140,7 @@ function createFreshdeskTicket(title, description, email) {
 <li>Installation parameters (also known as iparams) are values that users configure when installing apps. You can define these parameters in the iparams.json file available in the <strong>config</strong> directory </li>
 <li>The app expects two installation parameters - an <strong>API key</strong> and a <strong>subdomain</strong>.</li>
 <li>In this case, the API key is secured using the <em>secure</em> property when defined as an iparam.</li>
-<li>Copy the following JSON into the <strong>iparams.json </strong>file </li>
+<li>Copy the following JSON into the <strong>config/iparams.json </strong>file. Replace the previous contents with this JSON</li>
 </ol>
 <pre><code>{
  &#34;freshdesk_api_key&#34;: {
@@ -158,7 +158,7 @@ function createFreshdeskTicket(title, description, email) {
  }
 }</code></pre>
 <ol type="1" start="5">
-<li>Copy the following JSON and paste it in <strong>iparam_test_data.json </strong></li>
+<li>Copy the following JSON and paste it in <strong>config/iparam_test_data.json. </strong>Replace the previous contents with this JSON</li>
 </ol>
 <pre><code>{
  &#34;freshdesk_api_key&#34;: &#34;&lt;YOUR_FRESHDESK_API_KEY&gt;&#34;,
@@ -200,6 +200,8 @@ function createFreshdeskTicket(title, description, email) {
         <p>        Congratulations! You&#39;ve just completed your first advanced freshdesk app and learned about Request API, Interface API, and Installation Parameters</p>
 <h3 is-upgraded><strong>What&#39;s Next</strong></h3>
 <p>Now that we have seen the essential features, let&#39;s understand other interesting features such as OAuth, Data storage and Instance API (Notifications, Modals, Dialogs)</p>
+<p class="image-container"><img style="width: 425.00px" src="img/b116a67758beb565.gif"></p>
+<p><em>&#34;Gotta Catch &#39;Em All&#34; - Pokemon</em></p>
 
 
       </google-codelab-step>

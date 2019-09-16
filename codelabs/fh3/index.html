@@ -79,33 +79,40 @@
 <ol type="1" start="1">
 <li>In the <strong>server.js</strong> file, replace the existing <code>onTicketCreateHandler</code> method with the code from the following function snippet.</li>
 </ol>
-<pre><code>onTicketCreateHandler: function (args) {
-    $request.post(`https://api.github.com/repos/${args.iparams.github_repo}/issues`, {
-      headers: {
-        Authorization: &#39;token &lt;%= access_token %&gt;&#39;,
-        &#39;User-Agent&#39;: &#39;FreshHuddle Sample User Agent&#39;
-      },
-      isOAuth: true,
-      json: {
-        title: args.data.ticket.subject,
-        body: args.data.ticket.description_text,
-        labels: [
-          &#34;bug&#34;
-        ]
-      }
-    }).then(data =&gt; {
-      console.info(&#39;Successfully created the GitHub issue for the Freshdesk ticket&#39;);
-      setData({ ticketID: args.data.ticket.id, issueID: data.id, issueNumber: data.number }).then(function () {
-        console.info(&#39;Successfully set the mapping in the db&#39;);
-      }, error =&gt; {
-        console.error(&#39;Error: Failed to set the mapping in the db&#39;);
-        console.error(error);
-      });
-    }, error =&gt; {
-      console.error(&#39;Error: Failed to create the GitHub issue for the Freshdesk ticket&#39;);
-      console.error(error);
-    });
-  }</code></pre>
+<pre><code> /**
+  * Handler for onTicketCreate event
+  *
+  * A GitHub issue is created based on the ticket details from the payload received in the function argument
+  *
+  * @param {object} args - payload
+  */
+ onTicketCreateHandler: function (args) {
+   $request.post(`https://api.github.com/repos/${args.iparams.github_repo}/issues`, {
+     headers: {
+       Authorization: &#39;token &lt;%= access_token %&gt;&#39;,
+       &#39;User-Agent&#39;: &#39;FreshHuddle Sample User Agent&#39;
+     },
+     isOAuth: true,
+     json: {
+       title: args.data.ticket.subject,
+       body: args.data.ticket.description_text,
+       labels: [
+         &#34;bug&#34;
+       ]
+     }
+   }).then(data =&gt; {
+     console.info(&#39;Successfully created the GitHub issue for the Freshdesk ticket&#39;);
+     saveMapping({ ticketID: args.data.ticket.id, issueID: data.id, issueNumber: data.number }).then(function () {
+       console.info(&#39;Successfully set the mapping in the db&#39;);
+     }, error =&gt; {
+       console.error(&#39;Error: Failed to set the mapping in the db&#39;);
+       console.error(error);
+     });
+   }, error =&gt; {
+     console.error(&#39;Error: Failed to create the GitHub issue for the Freshdesk ticket&#39;);
+     console.error(error);
+   });
+ }</code></pre>
 <ol type="1" start="2">
 <li>Add the following helper code before the exports object, to save the mapping data of the ticket and the GitHub issue in Data Storage.</li>
 </ol>

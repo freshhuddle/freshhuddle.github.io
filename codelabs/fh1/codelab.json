@@ -1,9 +1,9 @@
 {
-  "environment": "Freshdesk",
+  "environment": "web",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2019-09-16T01:40:15Z",
+  "updated": "2019-09-16T03:04:00Z",
   "id": "fh1",
   "duration": 0,
   "title": "2. Create your first advanced app for Freshdesk",
@@ -15,7 +15,7 @@
     "published"
   ],
   "category": [
-    "Freshdesk"
+    "Web"
   ],
   "tags": [
     "freshdesk"

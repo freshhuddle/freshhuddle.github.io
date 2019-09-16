@@ -1,9 +1,9 @@
 {
-  "environment": "Freshdesk",
+  "environment": "web",
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2019-09-16T01:40:05Z",
+  "updated": "2019-09-16T02:42:33Z",
   "id": "fh0",
   "duration": 0,
   "title": "1. Introduction to Freshworks Developer Platform",
@@ -15,7 +15,7 @@
     "published"
   ],
   "category": [
-    "Freshdesk"
+    "Web"
   ],
   "tags": [
     "freshdesk"
